@@ -17,7 +17,7 @@ It is very easy to manually analyze a C, C++ and Objective-C project with SonarQ
 . Wrap your clean build command with the Build Wrapper. E.g.: `build-wrapper-win-x86-64.exe --out-dir bw-output MSBuild.exe /t:Rebuild /nodeReuse:false` (with `bw-output` being the same directory that the one set in `sonar-project.properties`)
 . Run `sonar-scanner`
 
-You can take a look at the link:sonar-project.properties[sonar-project.properties] to see it in practice. Please be aware that the SonarQube server URL and the `sonar.login` are not completed in this example.
+You can take a look at the link:sonar-project.properties[sonar-project.properties] and link:build-analyze.ps1[build-analyze.ps1] to see it in practice. Please be aware that the SonarQube server URL and the `sonar.login` are not completed in this example.
 
 = Documentation
 - https://docs.sonarqube.org/latest/analysis/languages/cfamily/[Documentation of the C, C++ and Objective-C plugin and its Build Wrapper]
