@@ -6,7 +6,7 @@ git fetch --unshallow
 
 $SONAR_SERVER_URL = "$env:SONAR_HOST_URL" # Url to your SonarQube instance. In this example, it is defined in the environement through a Github secret.
 #$SONAR_TOKEN = # Access token coming from SonarQube projet creation page. In this example, it is defined in the environement through a Github secret.
-$SONAR_SCANNER_VERSION = "4.6.1.2450" # Find the latest version in the "Windows" link on this page:
+$SONAR_SCANNER_VERSION = "4.8.0.2856" # Find the latest version in the "Windows" link on this page:
                                       # https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 $BUILD_WRAPPER_OUT_DIR = "bw-output" # Directory where build-wrapper output will be placed
 
