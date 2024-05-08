@@ -33,3 +33,5 @@ build-wrapper-win-x86-64 --out-dir $BUILD_WRAPPER_OUT_DIR msbuild sonar_scanner_
 
 # Run sonar scanner
 sonar-scanner.bat --define sonar.host.url=$SONAR_SERVER_URL --define sonar.login=$SONAR_TOKEN --define sonar.cfamily.compile-commands=$BUILD_WRAPPER_OUT_DIR/compile_commands.json
+# if you are using using SonarQube 10.5 or earlier, replace sonar.cfamily.compile-commands with sonar.cfamily.build-wrapper-output=$BUILD_WRAPPER_OUT_DIR
+# as build-wrapper does not generate a compile_commands.json file before SonarQube 10.6
