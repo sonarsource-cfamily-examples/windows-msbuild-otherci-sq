@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up msbuild
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@v2
       - name: Build and analyze on SonarQube
         env:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
