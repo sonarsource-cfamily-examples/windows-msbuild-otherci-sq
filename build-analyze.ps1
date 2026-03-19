@@ -26,7 +26,7 @@ $env:Path += ";$HOME/.sonar/build-wrapper-win-x86"
 $path = "$HOME/.sonar/sonar-scanner-cli-$SONAR_SCANNER_VERSION-windows-x64.zip"
 (New-Object System.Net.WebClient).DownloadFile("https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-windows-x64.zip", $path)
 [System.IO.Compression.ZipFile]::ExtractToDirectory($path, "$HOME/.sonar")
-$env:Path += ";$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-windows/bin"
+$env:Path += ";$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-windows-x64/bin"
 
 # Build inside the build-wrapper
 build-wrapper-win-x86-64 --out-dir $BUILD_WRAPPER_OUT_DIR msbuild sonar_scanner_example.vcxproj /t:rebuild /nodeReuse:false
