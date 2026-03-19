@@ -23,8 +23,8 @@ $path = "$HOME/.sonar/build-wrapper-win-x86.zip"
 $env:Path += ";$HOME/.sonar/build-wrapper-win-x86"
 
 # Download sonar-scanner
-$path = "$HOME/.sonar/sonar-scanner-cli-$SONAR_SCANNER_VERSION-windows.zip"
-(New-Object System.Net.WebClient).DownloadFile("https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-windows.zip", $path)
+$path = "$HOME/.sonar/sonar-scanner-cli-$SONAR_SCANNER_VERSION-windows-x64.zip"
+(New-Object System.Net.WebClient).DownloadFile("https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-windows-x64.zip", $path)
 [System.IO.Compression.ZipFile]::ExtractToDirectory($path, "$HOME/.sonar")
 $env:Path += ";$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-windows/bin"
 
