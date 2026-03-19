@@ -9,7 +9,7 @@ jobs:
   build-analyze:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set up msbuild
         uses: microsoft/setup-msbuild@v2
       - name: Build and analyze on SonarQube
